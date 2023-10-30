@@ -1,0 +1,47 @@
+.progress {
+  background-color: #1f2833;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+
+    div {
+      text-align: center;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 65px;
+      color: #ffffff;
+      font-weight: 200;
+      font-style: italic;
+
+      @media (max-width: 1024px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 200;
+
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
