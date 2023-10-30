@@ -1,3 +1,9 @@
+import Contacts from "@/sections/Contacts";
+
 export default function Home() {
-  return <div>page</div>;
+  return (
+    <>
+      <Contacts />
+    </>
+  );
 }

@@ -1,0 +1,124 @@
+.contacts {
+  background-image: url("/images/backgrounds/whiteMarble.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    font-size: 38px;
+    color: #1f2833;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  }
+
+  &__info {
+    width: 50%;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    div {
+      display: flex;
+      border-bottom: 1px solid #1f2833;
+      align-items: center;
+      margin-top: 20px;
+      padding-bottom: 20px;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    h2 {
+      font-size: 30px;
+      color: #1f2833;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: pre-wrap;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: #1f2833;
+      text-align: center;
+      margin-left: 50px;
+      white-space: pre-wrap;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        margin-left: 0;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__comm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    @media (max-width: 1024px) {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    div {
+      margin-bottom: 20px;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 15px;
+      }
+    }
+
+    h2 {
+      font-size: 35px;
+      color: #1f2833;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        text-align: center;
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 17px;
+      color: #1f2833;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+}
