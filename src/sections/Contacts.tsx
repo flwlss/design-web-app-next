@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 
 const Contacts = () => {
   return (
-    <section className="contacts">
+    <section id="contacts" className="contacts">
       <Container>
         <>
           <h1 className="contacts__title">контакты</h1>

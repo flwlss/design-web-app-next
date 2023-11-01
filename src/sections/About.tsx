@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 
 const About = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <Container>
         <div className="about__wrapper">
           <div className="about__description">
