@@ -27,7 +27,7 @@ export const contactsInfo = [
 export const employees = [
   {
     id: 1,
-    imageSrc: "/images/employees/julia.jpg",
+    image: "/images/employees/julia.jpg",
     phone: "+7 (923) 465-99-77",
     name: "Юлия Кошкина",
     post: "АРХИТЕКТОР, TEAM LEAD, FOUNDER",
@@ -36,7 +36,7 @@ export const employees = [
   },
   {
     id: 2,
-    imageSrc: "/images/employees/andrey.jpg",
+    image: "/images/employees/andrey.jpg",
     phone: "+7 (951) 604-80-60",
     name: "Андрей Витомский",
     post: "АРХИТЕКТОР, ДИЗАЙНЕР, CEO",
@@ -45,7 +45,7 @@ export const employees = [
   },
   {
     id: 3,
-    imageSrc: "/images/employees/nikita.jpg",
+    image: "/images/employees/nikita.jpg",
     phone: "+7 (913) 295-92-49",
     name: "Никита Жуков",
     post: "ДИЗАЙНЕР, CEO",
@@ -54,7 +54,7 @@ export const employees = [
   },
   {
     id: 3,
-    imageSrc: "/images/employees/roma.jpg",
+    image: "/images/employees/roma.jpg",
     name: "Роман Агеев",
     post: "ИНЖЕНЕР-КОНСТРУКТОР",
     description:

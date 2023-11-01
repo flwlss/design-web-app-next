@@ -7,7 +7,7 @@ const Navbar = () => {
       <Container>
         <div className="navbar__wrapper">
           <div className="navbar__logoWrapper">
-            <img src="/images/logo.svg" alt="" />
+            <img src="/images/logo.svg" alt="logo" />
             <p>{`architecture\ndesign`}</p>
           </div>
           <ul className="navbar__list">
