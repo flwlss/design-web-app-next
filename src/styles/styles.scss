@@ -2,6 +2,8 @@
 @import "./components.scss";
 @import "./contacts.scss";
 @import "./progress.scss";
+@import "./header.scss";
+@import "./navbar.scss";
 
 /* Указываем box sizing */
 *,
@@ -40,6 +42,11 @@ a,
 li {
   list-style: none;
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 body {

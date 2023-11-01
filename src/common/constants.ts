@@ -79,3 +79,26 @@ export const progress = [
     text: "лет опыта",
   },
 ];
+
+export const navItems = [
+  {
+    id: 1,
+    title: "о нас",
+    scrollId: "about",
+  },
+  {
+    id: 2,
+    title: "портфолио",
+    scrollId: "portfolio",
+  },
+  {
+    id: 3,
+    title: "услуги и цены",
+    scrollId: "services",
+  },
+  {
+    id: 4,
+    title: "контакты",
+    scrollId: "contacts",
+  },
+];
