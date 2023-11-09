@@ -1,5 +1,6 @@
 "use client";
 import { employees } from "@/common/constants";
+import { ArrowInCircle } from "@/svgs";
 import { Carousel } from "react-responsive-carousel";
 
 const AboutCarousel = () => {
@@ -9,6 +10,25 @@ const AboutCarousel = () => {
       showThumbs={false}
       showIndicators={false}
       showStatus={false}
+      showArrows={false}
+      renderArrowPrev={(clickHandler, hasPrev) => {
+        return (
+          <ArrowInCircle
+            onClick={clickHandler}
+            style={{ transform: "translate(0, -50%) scale(-1)" }}
+            className="about__carousel__button"
+          />
+        );
+      }}
+      renderArrowNext={(clickHandler, hasNext) => {
+        return (
+          <ArrowInCircle
+            onClick={clickHandler}
+            style={{ right: 0 }}
+            className="about__carousel__button"
+          />
+        );
+      }}
     >
       {employees.map((item) => {
         return (
