@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 const path = require("path");
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [{ loader: "@svgr/webpack", options: { icon: true } }],
+    });
+    return config;
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
 };
+
+module.exports = nextConfig;

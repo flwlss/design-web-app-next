@@ -47,6 +47,15 @@
     a {
       margin-right: 15px;
 
+      &:hover {
+        .telegram {
+          color: #0088cc;
+        }
+        .whatsapp {
+          color: #25d366;
+        }
+      }
+
       @media (max-width: 1024px) {
         margin-right: 10px;
       }
@@ -56,11 +65,14 @@
       }
     }
 
-    img {
+    &__svg {
       width: 40px;
+      height: 40px;
+      color: #ffffff;
 
       @media (max-width: 1024px) {
         width: 30px;
+        height: 30px;
       }
     }
   }

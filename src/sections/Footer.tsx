@@ -1,5 +1,5 @@
-import { socials } from "@/common/constants";
 import Container from "@/components/Container";
+import { Telegram, Whatsapp } from "@/svgs";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,13 +15,12 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer__socials">
-            {socials.map((item) => {
-              return (
-                <a key={item.id} href={item.href} target="_blank">
-                  <img src={item.svgSrc} alt={item.svgSrc} />
-                </a>
-              );
-            })}
+            <a href="https://t.me/fooyzi" target="_blank">
+              <Telegram className="footer__socials__svg telegram" />
+            </a>
+            <a href="https://wa.me/+79234792799" target="_blank">
+              <Whatsapp className="footer__socials__svg whatsapp" />
+            </a>
           </div>
         </div>
       </Container>
