@@ -3,26 +3,36 @@ import { employees, navItems } from "@/common/constants";
 import Container from "./Container";
 import { scroller } from "react-scroll";
 import { useEffect, useState } from "react";
+import {
+  scrollFunction,
+  scrollIndicator,
+  toggleBurger,
+} from "@/common/scripts";
 
 const Navbar = () => {
   const [sectionId, setSectionId] = useState("");
 
-  const toggleBurger = () => {
-    (document.getElementById("menu-toggle") as HTMLInputElement).checked =
-      false;
-  };
-
   useEffect(() => {
-    scroller.scrollTo(sectionId, {
-      offset: -79,
-      smooth: true,
-    });
-    toggleBurger();
-    setSectionId("");
+    if (sectionId) {
+      scroller.scrollTo(sectionId, {
+        offset: -79,
+        smooth: true,
+      });
+      toggleBurger();
+      setSectionId("");
+    }
   }, [sectionId]);
 
+  useEffect(() => {
+    window.onscroll = () => {
+      scrollIndicator();
+      scrollFunction();
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav id="navbar" className="navbar">
+      <div className="navbar__progress" id="scrollIndicator" />
       <Container>
         <div className="navbar__wrapper">
           <div
