@@ -1,0 +1,186 @@
+.services {
+  width: 100%;
+  display: flex;
+  height: 100%;
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+  }
+
+  &__featuresWrapper {
+    width: 50%;
+    background-image: url("/images/backgrounds/whiteMarble.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 30px 0 0;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 15px 0;
+    }
+    @media (max-width: 768px) {
+      padding: 15px 20px;
+    }
+  }
+
+  &__features {
+    width: 610px;
+    margin-left: auto;
+    border-right: 2px solid #1f2833;
+    border-left: 2px solid #1f2833;
+    padding: 0 20px;
+
+    @media (max-width: 1280px) {
+      width: 482px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 768px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 38px;
+      color: #1f2833;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+
+    div {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1f2833;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      color: #1f2833;
+      font-size: 27px;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+    p {
+      color: #1f2833;
+      font-size: 18px;
+      margin: 15px 0;
+      text-align: justify;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        font-size: 15px;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  &__meetingWrapper {
+    width: 50%;
+    background-image: url("/images/backgrounds/meetingBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0 15px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 15px 0 0 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 15px 20px 0 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      color: #fff;
+      font-weight: 100;
+      margin-bottom: 25px;
+
+      @media (max-width: 1024px) {
+        font-size: 30px;
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &__meeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 610px;
+
+    @media (max-width: 1280px) {
+      width: 482px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 768px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    div {
+      @media (max-width: 1024px) {
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+        margin-top: 10px;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 27px;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 18px;
+      margin-top: 15px;
+      text-align: justify;
+      font-weight: 300;
+
+      @media (max-width: 1024px) {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
