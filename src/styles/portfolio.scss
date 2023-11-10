@@ -1,0 +1,153 @@
+.portfolio {
+  background-image: url("/images/backgrounds/portfolio.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 25px;
+      color: #ffffff;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 200;
+      white-space: pre-wrap;
+      text-align: center;
+    }
+
+    span {
+      width: 1px;
+      height: 50px;
+      background: #fff;
+    }
+  }
+}
+
+.portfolioPage {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  &__opacity {
+    position: absolute;
+    background-color: rgba(31, 40, 51, 0.45);
+    padding: 15px 0 15px 20px;
+    width: calc(50% + 640px);
+    right: 0;
+
+    @media (max-width: 1280px) {
+      width: calc(50% + 512px);
+    }
+
+    @media (max-width: 1024px) {
+      position: relative;
+      max-width: 768px;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 15px 20px;
+    }
+
+    &__basics {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+
+      span {
+        width: 70px;
+        height: 2px;
+        background: #5ab9ea;
+      }
+
+      h2 {
+        font-size: 18px;
+        color: #5ab9ea;
+        text-transform: uppercase;
+        margin: 0 15px;
+        font-weight: 200;
+      }
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #fff;
+      margin: 10px 0;
+      font-weight: 200;
+      font-style: italic;
+
+      @media (max-width: 1024px) {
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 23px;
+      color: #fff;
+      font-weight: 200;
+      text-align: justify;
+      max-width: 1260px;
+
+      @media (max-width: 1280px) {
+        max-width: 1004px;
+      }
+
+      // @media (max-width: 1024px) {
+      //   max-width: 100%;
+      // }
+    }
+  }
+
+  &__left {
+    width: 640px;
+    margin-left: auto;
+    margin-top: auto;
+    padding-right: 30px;
+
+    @media (max-width: 1280px) {
+      width: 512px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  &__right {
+    width: 50%;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      display: flex;
+    }
+  }
+}

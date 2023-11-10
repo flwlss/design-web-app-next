@@ -2,7 +2,7 @@ import { meeting, services } from "@/common/constants";
 
 const Services = () => {
   return (
-    <section className="services">
+    <section id="services" className="services">
       <div className="services__featuresWrapper">
         <div className="services__features">
           <h1>услуги и цены</h1>
