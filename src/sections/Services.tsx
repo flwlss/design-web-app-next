@@ -13,7 +13,7 @@ const Services = async ({
       <div className="services__featuresWrapper">
         <div className="services__features">
           <h1>услуги и цены</h1>
-          {services.map((item: Service, index: number) => {
+          {services.map((item, index) => {
             return (
               <ServiceItem
                 key={index}

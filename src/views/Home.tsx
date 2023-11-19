@@ -1,3 +1,4 @@
+import Loader from "@/components/Loader";
 import About from "@/sections/About";
 import Contacts from "@/sections/Contacts";
 import Footer from "@/sections/Footer";
@@ -6,7 +7,7 @@ import Portfolio from "@/sections/Portfolio";
 import Progress from "@/sections/Progress";
 import Services from "@/sections/Services";
 
-interface IHomePage {
+interface IHome {
   services: Service[];
   meetings: Meeting[];
   hour: ContactInfo;
@@ -16,13 +17,15 @@ interface IHomePage {
   whatsapp: ContactInfo;
 }
 
-const HomePage = (props: IHomePage) => {
+const Home = (props: IHome) => {
   const { services, meetings, hour, email, employees, telegram, whatsapp } =
     props;
+
   return (
     <>
+      {/* <Loader /> */}
       <Header />
-      <About />
+      <About employees={employees} />
       <Progress />
       <Portfolio />
       <Services services={services} meetings={meetings} />
@@ -32,4 +35,4 @@ const HomePage = (props: IHomePage) => {
   );
 };
 
-export default HomePage;
+export default Home;

@@ -3,11 +3,7 @@ import { ArrowInCircle } from "@/svgs";
 import { Carousel } from "react-responsive-carousel";
 import CarouselItem from "./CarouselItem";
 
-interface IAboutCarousel {
-  employee: Employee[];
-}
-
-const AboutCarousel = ({ employee }: IAboutCarousel) => {
+const AboutCarousel = ({ employees }: { employees: Employee[] }) => {
   return (
     <Carousel
       swipeable={false}
@@ -34,7 +30,7 @@ const AboutCarousel = ({ employee }: IAboutCarousel) => {
         );
       }}
     >
-      {employee.map((item, index) => {
+      {employees.map((item, index) => {
         return <CarouselItem key={index} employee={item} />;
       })}
     </Carousel>
