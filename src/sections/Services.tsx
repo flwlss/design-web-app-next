@@ -1,17 +1,48 @@
-import { meeting, services } from "@/common/constants";
+import MeetingItem from "@/components/MeetingItem";
+import ServiceItem from "@/components/ServiceItem";
 
-const Services = () => {
+async function getServices() {
+  const res = await fetch("http://localhost:1337/api/services");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+async function getData() {
+  const res = await fetch("http://localhost:1337/api/meetings");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const Services = async () => {
+  const services = await getServices();
+  const data = await getData();
+
   return (
     <section id="services" className="services">
       <div className="services__featuresWrapper">
         <div className="services__features">
           <h1>услуги и цены</h1>
-          {services.map((item) => {
+          {services.data.map((item: Service, index: number) => {
             return (
-              <div key={item.id}>
-                <h2>{item.subtitle}</h2>
-                <p>{item.text}</p>
-              </div>
+              <ServiceItem
+                key={index}
+                title={item.attributes.title}
+                description={item.attributes.description}
+              />
             );
           })}
         </div>
@@ -19,12 +50,13 @@ const Services = () => {
       <div className="services__meetingWrapper">
         <h1>С чего начать с нами работу</h1>
         <div className="services__meeting">
-          {meeting.map((item) => {
+          {data.data.map((item: Meeting, index: number) => {
             return (
-              <div key={item.id}>
-                <h2>{item.subtitle}</h2>
-                <p>{item.text}</p>
-              </div>
+              <MeetingItem
+                key={index}
+                title={item.attributes.title}
+                description={item.attributes.description}
+              />
             );
           })}
         </div>

@@ -1,9 +1,13 @@
 "use client";
-import { employees } from "@/common/constants";
 import { ArrowInCircle } from "@/svgs";
 import { Carousel } from "react-responsive-carousel";
+import CarouselItem from "./CarouselItem";
 
-const AboutCarousel = () => {
+interface IAboutCarousel {
+  employee: Employee[];
+}
+
+const AboutCarousel = ({ employee }: IAboutCarousel) => {
   return (
     <Carousel
       swipeable={false}
@@ -30,15 +34,8 @@ const AboutCarousel = () => {
         );
       }}
     >
-      {employees.map((item) => {
-        return (
-          <div key={item.id}>
-            <img src={item.image} alt={item.image} />
-            <h1>{item.name}</h1>
-            <h2>{item.post}</h2>
-            <p>{item.description}</p>
-          </div>
-        );
+      {employee.map((item, index) => {
+        return <CarouselItem key={index} employee={item} />;
       })}
     </Carousel>
   );

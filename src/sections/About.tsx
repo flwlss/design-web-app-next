@@ -1,7 +1,22 @@
 import AboutCarousel from "@/components/AboutCarousel";
 import Container from "@/components/Container";
 
-const About = () => {
+async function getEmployees() {
+  const res = await fetch("http://localhost:1337/api/employees?populate=*");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const About = async () => {
+  const employee = await getEmployees();
+
   return (
     <section id="about" className="about">
       <Container>
@@ -28,7 +43,7 @@ const About = () => {
             </p>
           </div>
           <div className="about__carousel">
-            <AboutCarousel />
+            <AboutCarousel employee={employee.data} />
           </div>
         </div>
       </Container>

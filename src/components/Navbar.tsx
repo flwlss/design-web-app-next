@@ -1,5 +1,5 @@
 "use client";
-import { employees, navItems } from "@/common/constants";
+import { navItems } from "@/common/constants";
 import Container from "./Container";
 import { scroller } from "react-scroll";
 import { useEffect, useState } from "react";
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </li>
               );
             })}
-            <li>{employees[0].phone}</li>
+            <li>change number</li>
           </ul>
 
           <div className="burger-menu">
@@ -78,7 +78,7 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <li>{employees[0].phone}</li>
+              <li>change number</li>
             </ul>
           </div>
         </div>
