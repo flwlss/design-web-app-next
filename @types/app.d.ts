@@ -22,6 +22,12 @@ interface Meeting {
   };
 }
 
+interface ContactInfo {
+  attributes: {
+    [key: string]: string;
+  };
+}
+
 interface ImageSrc {
   data: {
     attributes: {

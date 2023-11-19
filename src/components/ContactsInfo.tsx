@@ -1,18 +1,19 @@
-interface IContactsInfo {
-  hour: string;
-  email: string;
-}
-
-const ContactsInfo = ({ hour, email }: IContactsInfo) => {
+const ContactsInfo = ({
+  hour,
+  email,
+}: {
+  hour: ContactInfo;
+  email: ContactInfo;
+}) => {
   return (
     <div className="contacts__info">
       <div>
         <h2>{"часы\nработы:"}</h2>
-        <p>{hour}</p>
+        <p>{hour.attributes.hour}</p>
       </div>
       <div>
         <h2>почта:</h2>
-        <p>{email}</p>
+        <p>{email.attributes.email}</p>
       </div>
     </div>
   );

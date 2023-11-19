@@ -1,19 +1,8 @@
-import About from "@/sections/About";
-import Contacts from "@/sections/Contacts";
-import Header from "@/sections/Header";
-import Portfolio from "@/sections/Portfolio";
-import Progress from "@/sections/Progress";
-import Services from "@/sections/Services";
+import { fetchAllData } from "@/common/scripts";
+import HomePage from "@/views/HomePage";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <About />
-      <Progress />
-      <Portfolio />
-      <Services />
-      <Contacts />
-    </>
-  );
+export default async function Home() {
+  const results = await fetchAllData();
+
+  return <HomePage {...results} />;
 }
