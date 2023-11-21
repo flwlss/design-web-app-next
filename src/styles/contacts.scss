@@ -87,7 +87,7 @@
     text-align: right;
 
     @media (max-width: 1024px) {
-      margin-top: 20px;
+      margin-top: 15px;
       width: 100%;
     }
 
@@ -96,6 +96,10 @@
 
       @media (max-width: 1024px) {
         margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 

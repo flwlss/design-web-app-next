@@ -1,3 +1,5 @@
+import BlueButton from "./BlueButton";
+
 const ContactsInfo = ({
   hour,
   email,
@@ -15,6 +17,7 @@ const ContactsInfo = ({
         <h2>почта:</h2>
         <p>{email.attributes.email}</p>
       </div>
+      <BlueButton />
     </div>
   );
 };
