@@ -53,6 +53,10 @@
       text-transform: uppercase;
       cursor: pointer;
       font-weight: 300;
+
+      &:last-child {
+        cursor: auto;
+      }
     }
   }
 }

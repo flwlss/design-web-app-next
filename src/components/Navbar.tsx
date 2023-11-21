@@ -9,7 +9,7 @@ import {
   toggleBurger,
 } from "@/common/scripts";
 
-const Navbar = () => {
+const Navbar = ({ employee }: { employee: Employee }) => {
   const [sectionId, setSectionId] = useState("");
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </li>
               );
             })}
-            <li>change number</li>
+            <li>{employee.attributes.phone}</li>
           </ul>
 
           <div className="burger-menu">
@@ -78,7 +78,7 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <li>change number</li>
+              <li>{employee.attributes.phone}</li>
             </ul>
           </div>
         </div>

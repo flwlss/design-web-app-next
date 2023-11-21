@@ -24,7 +24,7 @@ const Home = (props: IHome) => {
   return (
     <>
       {/* <Loader /> */}
-      <Header />
+      <Header employee={employees[0]} />
       <About employees={employees} />
       <Progress />
       <Portfolio />

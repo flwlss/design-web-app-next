@@ -1,10 +1,10 @@
 import Container from "@/components/Container";
 import Navbar from "@/components/Navbar";
 
-const Header = () => {
+const Header = ({ employee }: { employee: Employee }) => {
   return (
     <header id="header" className="header">
-      <Navbar />
+      <Navbar employee={employee} />
       <Container>
         <div className="header__content">
           <h1>Современная архитектура</h1>
